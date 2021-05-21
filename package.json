@@ -1,0 +1,22 @@
+{
+  "name": "lolcommit",
+  "version": "2.1.0",
+  "description": "generate a funny commit message",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "javascript",
+    "npm",
+    "nodejs"
+  ],
+  "author": "Ellie Keen",
+  "license": "ISC",
+  "bin": {
+    "lolcommit": "bin/index.js"
+  },
+  "dependencies": {
+    "simple-get": "^4.0.0"
+  }
+}

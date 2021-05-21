@@ -12,14 +12,16 @@ const offlineCommitMessages = [
   'more changes',
   'more stuff to fix the previous things',
   'the product owner made me do it',
-  'add code'
+  'add code',
+  'aodjpsodDAHHHHH!',
+  'made it DRY, made it DRY'
 ];
 
 const generateRandomNumber = Math.floor(Math.random() * offlineCommitMessages.length - 1);
  
 get('http://whatthecommit.com/index.txt', function (err, res) {
-  if (err) {
+  if (err || !res) {
     console.log(offlineCommitMessages[generateRandomNumber]);
-  }
-  res.pipe(process.stdout)
+  } else {
+  res.pipe(process.stdout)}
 });

@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-const get = require('simple-get')
+const got = require('got')
 
 const offlineCommitMessages = [
   'another commit',
@@ -18,10 +18,12 @@ const offlineCommitMessages = [
 ];
 
 const generateRandomNumber = Math.floor(Math.random() * offlineCommitMessages.length - 1);
- 
-get('http://whatthecommit.com/index.txt', function (err, res) {
-  if (err || !res) {
-    console.log(offlineCommitMessages[generateRandomNumber]);
-  } else {
-  res.pipe(process.stdout)}
-});
+
+(async () => {
+	try {
+		const response = await got('http://whatthecommit.com/index.txt');
+		console.log(response.body);
+	} catch (error) {
+		console.log(offlineCommitMessages[generateRandomNumber]);
+	}
+})();

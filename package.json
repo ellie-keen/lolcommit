@@ -17,6 +17,6 @@
     "lolcommit": "bin/index.js"
   },
   "dependencies": {
-    "simple-get": "^4.0.0"
+    "got": "^11.8.2"
   }
 }

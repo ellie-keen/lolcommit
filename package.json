@@ -11,7 +11,7 @@
     "npm",
     "nodejs"
   ],
-  "author": "Ellie Keen",
+  "author": "Ellie Keen | Jessica Barclay",
   "license": "ISC",
   "bin": {
     "lolcommit": "bin/index.js"

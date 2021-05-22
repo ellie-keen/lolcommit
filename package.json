@@ -17,6 +17,7 @@
     "lolcommit": "bin/index.js"
   },
   "dependencies": {
+    "chalk": "^4.1.1",
     "got": "^11.8.2"
   }
 }

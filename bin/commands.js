@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+const chalk = require('chalk');
 const got = require('got')
 
 const { backupMessages } = require("./backupMessages");
@@ -7,7 +8,7 @@ const generateRandomNumber = Math.floor(Math.random() * (backupMessages.length -
 
 
 const getCommitMessage = (prefix) => (async () => {
-	const prefixMessage = 'LOLCOMMIT: '
+	const prefixMessage = chalk.yellowBright('lolcommit: ');
 
 	try {
 		const response = await got('http://whatthecommit.com/index.txt');

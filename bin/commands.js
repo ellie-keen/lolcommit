@@ -17,8 +17,4 @@ const getCommitMessage = (prefix) => (async () => {
 	}
 })();
 
-const defaultCommand = (prefix) => {
-	prefix ? getCommitMessage(prefix) : getCommitMessage();
-};
-
-module.exports = { defaultCommand };
+module.exports = { getCommitMessage };

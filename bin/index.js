@@ -1,10 +1,10 @@
 #! /usr/bin/env node
 
-const { prefixCommand, defaultCommand } = require("./commands");
+const { defaultCommand } = require("./commands");
 
 switch (process.argv[2]) {
   case 'prefix':
-    prefixCommand();
+    defaultCommand({ prefix: true });
     break;
   case undefined:
     defaultCommand();

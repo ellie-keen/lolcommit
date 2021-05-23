@@ -13,7 +13,7 @@ const getCommitMessage = (prefix) => (async () => {
 		console.log(prefix ? prefixMessage + response.body : response.body);
 	} catch (error) {
 		console.log(prefix ? prefixMessage + backupMessages[generateRandomNumber(backupMessages.length - 1)] :
-		backupMessages[generateRandomNumber(backupMessages)]);
+		backupMessages[generateRandomNumber(backupMessages.length - 1)]);
 	}
 })();
 

@@ -18,3 +18,6 @@ Tests are written using the [Jest](https://jestjs.io/docs/getting-started) frame
 ```sh
 npm run test
 ```
+
+## CI
+This project uses Travis for CI, to build and run tests on Pull Requests.

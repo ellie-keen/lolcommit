@@ -12,7 +12,8 @@ const getCommitMessage = (prefix) => (async () => {
 		const response = await got('http://whatthecommit.com/index.txt');
 		console.log(prefix ? prefixMessage + response.body : response.body);
 	} catch (error) {
-		console.log(prefix ? prefixMessage + backupMessages[generateRandomNumber] : backupMessages[generateRandomNumber]);
+		console.log(prefix ? prefixMessage + backupMessages[generateRandomNumber(backupMessages.length - 1)] :
+		backupMessages[generateRandomNumber(backupMessages)]);
 	}
 })();
 

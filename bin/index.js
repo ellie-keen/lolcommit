@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const { getCommitMessage } = require("./commands");
+const { getCommitMessage } = require('./commands');
 
 const args = {
   PREFIX: 'prefix'

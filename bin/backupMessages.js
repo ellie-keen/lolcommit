@@ -11,7 +11,7 @@ const backupMessages = [
   'the product owner made me do it',
   'add code',
   'aodjpsodDAHHHHH!',
-  'made it DRY, made it DRY'
+  'made it DRY, made it DRY',
 ];
 
 module.exports = { backupMessages };

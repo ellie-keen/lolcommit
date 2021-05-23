@@ -10,5 +10,5 @@ switch (process.argv[2]) {
     defaultCommand();
     break;
   default:
-    console.log('CONFUSED!');
+    console.log('That command is not recognised');
 }

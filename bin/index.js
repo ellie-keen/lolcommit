@@ -1,15 +1,20 @@
 #! /usr/bin/env node
-const got = require('got')
 
-const { backupMessages } = require("./backupMessages");
+const { getCommitMessage } = require("./commands");
 
-const generateRandomNumber = Math.floor(Math.random() * (backupMessages.length - 1));
+const args = {
+  PREFIX: 'prefix'
+};
 
-(async () => {
-	try {
-		const response = await got('http://whatthecommit.com/index.txt');
-		console.log(response.body);
-	} catch (error) {
-		console.log(backupMessages[generateRandomNumber]);
-	}
-})();
+const firstUserArg = process.argv.slice(2)[0];
+
+switch (firstUserArg) {
+  case args.PREFIX:
+    getCommitMessage({ prefix: true });
+    break;
+  case undefined:
+    getCommitMessage();
+    break;
+  default:
+    console.log('That command is not recognised');
+}

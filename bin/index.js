@@ -2,8 +2,14 @@
 
 const { defaultCommand } = require("./commands");
 
-switch (process.argv[2]) {
-  case 'prefix':
+const args = {
+  PREFIX: 'prefix'
+};
+
+const firstUserArg = process.argv.slice(2)[0];
+
+switch (firstUserArg) {
+  case args.PREFIX:
     defaultCommand({ prefix: true });
     break;
   case undefined:

@@ -8,20 +8,16 @@ jest.mock('../../bin/backupMessages', () => ({
 
 test('getCommitMessage returns a random commit message', async () => {
     got.get.mockReturnValueOnce({'body': 'Random message!'});
-    const responsePromise = commands.getCommitMessage();
-
-    responsePromise.then(function(result) {
-        expect(result).toBe('Random message!');
-    });
+    
+    const result = await commands.getCommitMessage();
+    
+    expect(result).toBe('Random message!');
 });
 
 test('getCommitMessage returns a random commit message when GET request fails', async () => {
-    got.get.mockImplementation(() => {
-        throw new Error();
-    });
-    const responsePromise = commands.getCommitMessage();
-
-    responsePromise.then(function(result) {
-        expect(result).toBe('Random backup message!');
-    });
+    got.get.mockImplementation(() => { throw new Error(); });
+    
+    const result = await commands.getCommitMessage();
+    
+    expect(result).toBe('Random backup message!');
 });

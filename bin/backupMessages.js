@@ -14,4 +14,4 @@ const backupMessages = [
     'made it DRY, made it DRY'
   ];
 
-  module.exports = { backupMessages };
+module.exports = { backupMessages };

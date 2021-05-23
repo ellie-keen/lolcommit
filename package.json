@@ -4,7 +4,8 @@
   "description": "generate a funny commit message",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "test --watch": "jest --watchAll"
   },
   "keywords": [
     "javascript",
@@ -19,5 +20,8 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "got": "^11.8.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }

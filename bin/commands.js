@@ -3,9 +3,7 @@ const chalk = require('chalk');
 const got = require('got')
 
 const { backupMessages } = require("./backupMessages");
-
-const generateRandomNumber = Math.floor(Math.random() * (backupMessages.length - 1));
-
+const { generateRandomNumber } = require("../utils/generateRandomNumber");
 
 const getCommitMessage = (prefix) => (async () => {
 	const prefixMessage = chalk.yellowBright('lolcommit: ');

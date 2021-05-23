@@ -1,3 +1,4 @@
-const generateRandomNumber = (maximumValue) => Math.floor(Math.random() * maximumValue);
+const generateRandomNumber = (maximumValue) =>
+  Math.floor(Math.random() * maximumValue);
 
-module.exports = { generateRandomNumber};
+module.exports = { generateRandomNumber };

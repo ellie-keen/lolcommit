@@ -3,7 +3,7 @@
 const { getCommitMessage } = require('./commands');
 
 const args = {
-  PREFIX: 'prefix'
+  PREFIX: 'prefix',
 };
 
 const firstUserArg = process.argv.slice(2)[0];

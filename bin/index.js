@@ -4,17 +4,26 @@ const { getCommitMessage } = require('./commands');
 
 const args = {
   PREFIX: 'prefix',
+  COMMIT: 'commit',
 };
 
-const firstUserArg = process.argv.slice(2)[0];
+const executeCommandBasedOnInput = () => {
+  const userArgs = process.argv.slice(2).map((arg) => arg.toLowerCase());
 
-switch (firstUserArg) {
-  case args.PREFIX:
-    getCommitMessage({ prefix: true });
-    break;
-  case undefined:
-    getCommitMessage();
-    break;
-  default:
+  const params = {
+    prefix: userArgs.includes(args.PREFIX),
+    commit: userArgs.includes(args.COMMIT),
+  };
+
+  const argsNotRecognised =
+    !userArgs.includes(args.PREFIX) && !userArgs.includes(args.COMMIT);
+
+  if (userArgs.length > 0 && argsNotRecognised) {
     console.log('That command is not recognised');
-}
+    return;
+  }
+
+  getCommitMessage(params);
+};
+
+executeCommandBasedOnInput();

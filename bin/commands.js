@@ -1,11 +1,14 @@
 #! /usr/bin/env node
 const chalk = require('chalk');
 const got = require('got');
+const simpleGit = require('simple-git');
+
+const git = simpleGit();
 
 const { backupMessages } = require('./backupMessages');
 const { generateRandomNumber } = require('../utils/generateRandomNumber');
 
-const getCommitMessage = (prefix) =>
+const getCommitMessage = ({ prefix, commit }) =>
   (async () => {
     const prefixMessage = chalk.yellowBright('lolcommit: ');
 
@@ -13,8 +16,10 @@ const getCommitMessage = (prefix) =>
       const response = await got.get('http://whatthecommit.com/index.txt');
       const message = prefix ? prefixMessage + response.body : response.body;
 
-      console.log(message);
-      return message;
+      console.log(
+        commit ? `${chalk.yellowBright('Comitting...')} ${message}` : message
+      );
+      return commit ? git.commit(message) : message;
     } catch (error) {
       const message = prefix
         ? prefixMessage +
@@ -22,7 +27,7 @@ const getCommitMessage = (prefix) =>
         : backupMessages[generateRandomNumber(backupMessages.length - 1)];
 
       console.log(message);
-      return message;
+      return commit ? git.commit(message) : message;
     }
   })();
 

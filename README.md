@@ -12,6 +12,22 @@ npm install -g lolcommit
 lolcommit
 ```
 
+Output:
+
+```sh
+Not one conflict, today was a good day.
+```
+
+```sh
+lolcommit
+```
+
+Output:
+
+```sh
+lolcommit: Who Let the Bugs Out??
+```
+
 Find this on [npmjs.com](https://www.npmjs.com/package/lolcommit)
 Inspired by [whatthecommit](http://whatthecommit.com/)
 

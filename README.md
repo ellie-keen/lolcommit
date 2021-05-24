@@ -22,6 +22,18 @@ Inspired by [whatthecommit](http://whatthecommit.com/)
 > lolcommit: Who Let the Bugs Out??
 ```
 
+`lolcommit commit`
+
+```sh
+> git commit -m "Ok, 5am, it works.  For real."
+```
+
+`lolcommit prefix commit`
+
+```sh
+> git commit -m "lolcommit: Version control is awful"
+```
+
 ## Tests
 
 Tests are written using the [Jest](https://jestjs.io/docs/getting-started) framework.

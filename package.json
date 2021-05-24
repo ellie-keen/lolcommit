@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "chalk": "^4.1.1",
-    "got": "^11.8.2"
+    "eslint-plugin-jest": "^24.3.6",
+    "got": "^11.8.2",
+    "simple-git": "^2.39.0"
   },
   "devDependencies": {
     "eslint": "^7.27.0",

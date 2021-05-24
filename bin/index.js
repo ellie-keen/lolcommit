@@ -7,18 +7,23 @@ const args = {
   COMMIT: 'commit',
 };
 
-const firstUserArg = process.argv.slice(2)[0];
+const executeCommandBasedOnInput = () => {
+  const userArgs = process.argv.slice(2);
 
-switch (firstUserArg) {
-  case args.PREFIX:
-    getCommitMessage({ prefix: true, commit: false });
-    break;
-  case args.COMMIT:
-    getCommitMessage({ prefix: false, commit: true });
-    break;
-  case undefined:
-    getCommitMessage({ prefix: false, commit: false });
-    break;
-  default:
+  const params = {
+    prefix: userArgs.includes(args.PREFIX),
+    commit: userArgs.includes(args.COMMIT),
+  };
+
+  const argsNotRecognised =
+    !userArgs.includes(args.PREFIX) && !userArgs.includes(args.COMMIT);
+
+  if (userArgs.length > 0 && argsNotRecognised) {
     console.log('That command is not recognised');
-}
+    return;
+  }
+
+  getCommitMessage(params);
+};
+
+executeCommandBasedOnInput();

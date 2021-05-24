@@ -8,7 +8,7 @@ const args = {
 };
 
 const executeCommandBasedOnInput = () => {
-  const userArgs = process.argv.slice(2);
+  const userArgs = process.argv.slice(2).map((arg) => arg.toLowerCase());
 
   const params = {
     prefix: userArgs.includes(args.PREFIX),

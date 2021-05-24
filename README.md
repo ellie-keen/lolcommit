@@ -25,6 +25,7 @@ Inspired by [whatthecommit](http://whatthecommit.com/)
 ## Tests
 
 Tests are written using the [Jest](https://jestjs.io/docs/getting-started) framework.
+`npm run test`
 
 ## CI
 

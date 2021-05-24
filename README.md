@@ -1,43 +1,31 @@
 # lolcommit
 
+A command line tool to generate an amusing commit message.
+Find the lolcommit package on [npmjs.com](https://www.npmjs.com/package/lolcommit)
+Inspired by [whatthecommit](http://whatthecommit.com/)
+
 ## How to install
 
-```sh
-npm install -g lolcommit
-```
+`npm install -g lolcommit`
 
 ## How to run
 
-```sh
-lolcommit
-```
-
-Output:
+`lolcommit`
 
 ```sh
-Not one conflict, today was a good day.
+> Not one conflict, today was a good day.
 ```
+
+`lolcommit prefix`
 
 ```sh
-lolcommit
+> lolcommit: Who Let the Bugs Out??
 ```
-
-Output:
-
-```sh
-lolcommit: Who Let the Bugs Out??
-```
-
-Find this on [npmjs.com](https://www.npmjs.com/package/lolcommit)
-Inspired by [whatthecommit](http://whatthecommit.com/)
 
 ## Tests
 
 Tests are written using the [Jest](https://jestjs.io/docs/getting-started) framework.
 
-```sh
-npm run test
-```
-
 ## CI
+
 This project uses Travis for CI, to build and run tests on Pull Requests.

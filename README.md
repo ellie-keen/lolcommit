@@ -1,7 +1,9 @@
 # lolcommit
 
 A command line tool to generate an amusing commit message.
+
 Find the lolcommit package on [npmjs.com](https://www.npmjs.com/package/lolcommit)
+
 Inspired by [whatthecommit](http://whatthecommit.com/)
 
 ## How to install
@@ -37,6 +39,7 @@ Inspired by [whatthecommit](http://whatthecommit.com/)
 ## Tests
 
 Tests are written using the [Jest](https://jestjs.io/docs/getting-started) framework.
+
 `npm run test`
 
 ## CI
